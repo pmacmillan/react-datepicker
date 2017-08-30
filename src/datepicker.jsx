@@ -474,6 +474,7 @@ export default class DatePicker extends React.Component {
               {this.renderClearButton()}
             </div>
           }
+          popperContainer={this.props.popperContainer}
           popperComponent={calendar}
           popperPlacement={this.props.popperPlacement}/>
     )

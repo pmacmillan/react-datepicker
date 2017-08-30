@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Manager, Target, Popper } from 'react-popper'
+import { Portal } from 'react-overlays'
 
 export const popperPlacementPositions = [
   'auto',
@@ -52,20 +53,29 @@ export default class PopperComponent extends React.Component {
       targetComponent
     } = this.props
 
+    let popper
+
+    if (!hidePopper) {
+      popper = (
+        <Popper
+            className="react-datepicker-popper"
+            modifiers={popperModifiers}
+            placement={popperPlacement}>
+          {popperComponent}
+        </Popper>
+      )
+    }
+
+    if (this.props.popperContainer) {
+      popper = <Portal container={this.props.popperContainer} children={popper} />
+    }
+
     return (
       <Manager>
         <Target className="react-datepicker-wrapper">
           {targetComponent}
         </Target>
-        {
-          !hidePopper &&
-          <Popper
-              className="react-datepicker-popper"
-              modifiers={popperModifiers}
-              placement={popperPlacement}>
-            {popperComponent}
-          </Popper>
-        }
+        { popper }
       </Manager>
     )
   }
