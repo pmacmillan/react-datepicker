@@ -1,6 +1,6 @@
 {
   "author": "HackerOne",
-  "name": "react-datepicker",
+  "name": "@ermi/react-datepicker",
   "description": "A simple and reusable datepicker component for React",
   "version": "0.53.0-ermi.1",
   "license": "MIT",
