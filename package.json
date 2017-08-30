@@ -1,8 +1,8 @@
 {
   "author": "HackerOne",
   "name": "@ermi/react-datepicker",
-  "description": "A simple and reusable datepicker component for React",
-  "version": "0.53.0-ermi.1",
+  "description": "CUSTOM: A simple and reusable datepicker component for React",
+  "version": "0.53.0-ermi.2",
   "license": "MIT",
   "homepage": "https://github.com/Hacker0x01/react-datepicker",
   "main": "dist/react-datepicker.min.js",
@@ -22,10 +22,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/Hacker0x01/react-datepicker.git"
+    "url": "git://github.com/pmacmillan/react-datepicker.git"
   },
   "bugs": {
-    "url": "https://github.com/Hacker0x01/react-datepicker/issues"
+    "url": "https://github.com/pmacmillan/react-datepicker/issues"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
